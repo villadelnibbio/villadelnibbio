@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villa del Nibbio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    min-height: 100%;
+    background: #ffffff;
+    font-family: 'Nunito Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: appear 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes appear {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    margin-bottom: 2.4rem;
+  }
+
+  .villa-name {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 31px;
+    letter-spacing: 0.0714286em;
+    text-transform: uppercase;
+    color: #164404;
+    line-height: 1.2;
+  }
+
+  .villa-location {
+    margin-top: 0.65rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #444444;
+  }
+
+  /* ── Rule ── */
+  .rule {
+    width: 28px;
+    height: 1px;
+    background: #cccccc;
+    margin: 0 auto 2.4rem;
+  }
+
+  /* ── Buttons ── */
+  .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.05rem 1.4rem;
+    text-decoration: none;
+    border: 1px solid #d6d6d6;
+    background: #ffffff;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.18s ease;
+    animation: appear 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .btn:nth-child(1) { animation-delay: 0.10s; }
+  .btn:nth-child(2) { animation-delay: 0.18s; }
+  .btn:nth-child(3) { animation-delay: 0.26s; }
+
+  .btn:hover {
+    background: #f7f7f7;
+    border-color: #888888;
+    transform: translateY(-1px);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  .btn-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .btn-title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.0714286em;
+    text-transform: uppercase;
+    color: #333333;
+  }
+
+  .btn-sub {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.67rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #888888;
+  }
+
+  .btn-arrow {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    transition: color 0.18s, transform 0.18s;
+    flex-shrink: 0;
+  }
+
+  .btn:hover .btn-arrow {
+    color: #444444;
+    transform: translateX(3px);
+  }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 2.6rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.67rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #888888;
+    text-align: center;
+    animation: appear 0.8s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .footer a {
+    color: #888888;
+    text-decoration: none;
+    transition: color 0.18s;
+  }
+
+  .footer a:hover {
+    color: #333333;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div class="villa-name">Villa del Nibbio</div>
+    <div class="villa-location">Ficulle (TR) &nbsp;·&nbsp; Umbria, Italy</div>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="links">
+
+    <a class="btn" href="https://www.villadelnibbio.com/" target="_blank" rel="noopener">
+      <div class="btn-text">
+        <span class="btn-title">Our Villa</span>
+        <span class="btn-sub">Official website</span>
+      </div>
+      <span class="btn-arrow">→</span>
+    </a>
+
+    <a class="btn" href="https://www.airbnb.com/slink/pT8pxLv7" target="_blank" rel="noopener">
+      <div class="btn-text">
+        <span class="btn-title">Airbnb</span>
+        <span class="btn-sub">Availability &amp; rates</span>
+      </div>
+      <span class="btn-arrow">→</span>
+    </a>
+
+    <a class="btn" href="https://www.booking.com/Share-e0oMxx" target="_blank" rel="noopener">
+      <div class="btn-text">
+        <span class="btn-title">Booking.com</span>
+        <span class="btn-sub">Availability &amp; rates</span>
+      </div>
+      <span class="btn-arrow">→</span>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    <a href="https://www.instagram.com/villadelnibbio/" target="_blank" rel="noopener">@villadelnibbio</a>
+  </div>
+
+</div>
+
+</body>
+</html>
